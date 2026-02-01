@@ -1,99 +1,223 @@
+/* ================= RESET ================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Segoe UI", Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Background */
+/* ================= BODY ================= */
 body {
-    min-height: 100vh;
-    background: radial-gradient(circle at top, #1f3c44, #000);
+    background-color: #fffaf3;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    background-color: #4b2e2e;
+    padding: 20px 70px;
     display: flex;
-    flex-direction: column;
+    align-items: center;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* Push menu to right */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-left: auto;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    color: #f4d19b;
+}
+
+/* Theme Toggle Button */
+#themeToggle {
+    background: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* ================= HERO ================= */
+.hero {
+    height: 80vh;
+    background-image: url("https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1600&q=80");
+    background-size: cover;
+    background-position: center;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Heading */
-.text-center {
-    color: #ccefff;
-    margin-bottom: 12px;
+.hero-content {
+    background: rgba(255, 255, 255, 0.88);
+    padding: 40px 50px;
+    max-width: 600px;
+    border-radius: 12px;
+    text-align: center;
 }
 
-/* Calculator body */
-.container {
-    width: 300px;              /* 🔴 smaller width */
-    background: linear-gradient(145deg, lab(58.3% -6.69 -17.33), #716e6e);
-    padding: 18px;
-    border-radius: 22px;
-    box-shadow: 0 20px 45px rgba(0,0,0,0.9);
+.hero h2 {
+    font-size: 40px;
+    color: #4b2e2e;
 }
 
-/* Display */
-.input {
-    width: 100%;
-    height: 60px;              /* 🔴 reduced height */
-    background: #020b12;
-    color: #00e5ff;
-    font-size: 30px;
-    text-align: right;
-    padding: 8px 14px;
-    border-radius: 12px;       /* 🔴 not oval */
-    border: none;
-    outline: none;
-    margin-bottom: 14px;
-}
-
-/* Button grid */
-.row {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;                 /* 🔴 tighter gap */
-    margin-bottom: 10px;
-}
-
-/* Common button */
-.button {
-    height: 52px;              /* 🔴 fixed size */
-    width: 52px;
+.hero p {
     font-size: 18px;
-    border-radius: 50%;        /* 🔴 true circle */
-    border: none;
-    cursor: pointer;
-    background: #eef6ff;
-    color: #0d47a1;
-    transition: transform 0.1s ease, background 0.2s ease;
+    margin: 15px 0;
 }
 
-.button:active {
-    transform: scale(0.93);
-}
-
-/* Function buttons */
-.func {
-    background: #9fd3ff;
-    color: #003366;
-}
-
-/* Operator buttons */
-.operator {
-    background: #7c4dff;
+.order-btn {
+    display: inline-block;
+    background-color: #4b2e2e;
     color: white;
-}
-
-/* Equal button */
-.equal {
-    background: #00e676;
-    color: #003300;
+    padding: 12px 40px;
+    text-decoration: none;
+    border-radius: 4px;
     font-weight: bold;
 }
 
-/* Zero button */
-.zero {
-    grid-column: span 2;
+.order-btn:hover {
+    background-color: #603838;
+}
+
+/* ================= ABOUT ================= */
+.about {
+    padding: 60px 70px;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.about img {
+    width: 300px;
+    border-radius: 12px;
+}
+
+.about h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+/* ================= MENU ================= */
+.menu {
+    background-color: #1a1919;
+    padding: 60px 70px;
+    text-align: center;
+}
+
+.menu h3 {
+    color: #e0d6d6;
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.item {
+    background: white;
+    width: 220px;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.item img {
     width: 100%;
-    border-radius: 26px;
-    text-align: left;
-    padding-left: 20px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.item h4 {
+    margin-top: 10px;
+}
+
+.item p {
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background-color: #603838;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* ================= DARK MODE ================= */
+body.dark {
+    background-color: #121212;
+    color: #eeeeee;
+}
+
+body.dark .navbar {
+    background-color: #1f1f1f;
+}
+
+/* 🔥 FIX HERO TEXT VISIBILITY */
+body.dark .hero-content {
+    background: rgba(0, 0, 0, 0.65);
+}
+
+body.dark .hero-content h2 {
+    color: #f4d19b;
+}
+
+body.dark .hero-content p {
+    color: #ffffff;
+}
+
+body.dark .order-btn {
+    background-color: #f4d19b;
+    color: black;
+}
+
+body.dark footer {
+    background-color: #342d2d;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        margin-left: 0;
+    }
+
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
 }

@@ -3,61 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
+    <title>Coffee Corner Café</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="utils.css">
-
-    <!-- Icons -->
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 <body>
 
-    <h1 class="text-center">
-        <i class='bx bxs-calculator'></i> Calculator
-    </h1>
-
-    <div class="container flex flex-col items-center mx-auto">
-
-        <input type="text" class="input" readonly>
-
-        <div class="row">
-            <button class="button func">C</button>
-            <button class="button func">%</button>
-            <button class="button func">+/-</button>
-            <button class="button operator">/</button>
-        </div>
-
-        <div class="row">
-            <button class="button">7</button>
-            <button class="button">8</button>
-            <button class="button">9</button>
-            <button class="button operator">*</button>
-        </div>
-
-        <div class="row">
-            <button class="button">4</button>
-            <button class="button">5</button>
-            <button class="button">6</button>
-            <button class="button operator">-</button>
-        </div>
-
-        <div class="row">
-            <button class="button">1</button>
-            <button class="button">2</button>
-            <button class="button">3</button>
-            <button class="button operator">+</button>
-        </div>
-
-        <div class="row">
-            <button class="button zero">0</button>
-            <button class="button">.</button>
-            <button class="button equal">=</button>
-        </div>
-
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+    <div class="logo">
+        <span class="logo-icon">☕</span>
+        <span class="logo-text">Coffee Corner Café</span>
     </div>
 
-    <script src="index.js"></script>
+    <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+
+        <button id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+    </nav>
+</header>
+
+<!-- ================= HERO SECTION ================= -->
+<section class="hero" id="home">
+    <div class="hero-content">
+        <h2>Fresh Coffee, Fresh Mood</h2>
+        <p>Start your day with the perfect cup of coffee</p>
+        <a href="#menu" class="order-btn">Order Now</a>
+    </div>
+</section>
+
+<!-- ================= ABOUT SECTION ================= -->
+<section class="about" id="about">
+    <img 
+        src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80"
+        alt="Cup of coffee"
+    >
+
+    <div class="about-text">
+        <h3>About Our Café</h3>
+        <p>
+            Coffee Corner Café is a cozy place where freshly brewed coffee
+            meets delicious snacks. We serve love in every cup.
+        </p>
+    </div>
+</section>
+
+<!-- ================= MENU SECTION ================= -->
+<!-- Menu -->
+<section class="menu" id="menu">
+    <h3>Our Menu</h3>
+
+    <div class="menu-items">
+        <div class="item">
+            <img src="images/espresso.jpg">
+            <h4>Espresso</h4>
+            <p>₹120</p>
+        </div>
+
+        <div class="item">
+            <img src="images/cappuccino.jpg">
+            <h4>Cappuccino</h4>
+            <p>₹150</p>
+        </div>
+
+        <div class="item">
+            <img src="images/cold coffee.jpg">
+            <h4>Cold Coffee</h4>
+            <p>₹180</p>
+        </div>
+
+        <div class="item">
+            <img src="images/chocolate muffin.jpg">
+            <h4>Chocolate Muffin</h4>
+            <p>₹90</p>
+        </div>
+    </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer id="contact">
+    <p>© 2026 Coffee Corner Café | All Rights Reserved</p>
+</footer>
+
+<!-- ================= DARK MODE SCRIPT ================= -->
+<script>
+    const toggleBtn = document.getElementById("themeToggle");
+
+    toggleBtn.addEventListener("click", () => {
+        document.body.classList.toggle("dark");
+        toggleBtn.textContent =
+            document.body.classList.contains("dark") ? "☀️" : "🌙";
+    });
+</script>
+
 </body>
 </html>
