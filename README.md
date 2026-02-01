@@ -1,1 +1,4 @@
-protfolio
+portfolio
+landing page
+calculator
+
