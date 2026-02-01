@@ -2,103 +2,59 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>My Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coffee Corner Café</title>
-
-    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- ================= NAVBAR ================= -->
-<header class="navbar">
-    <div class="logo">
-        <span class="logo-icon">☕</span>
-        <span class="logo-text">Coffee Corner Café</span>
-    </div>
+    <!-- Navbar -->
+    <header>
+        <div class="logo">ROHINI KOLEKAR</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#projects">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
 
-    <nav class="nav-links">
-        <a href="#home">Home</a>
-        <a href="#menu">Menu</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
 
-        <button id="themeToggle" aria-label="Toggle dark mode">🌙</button>
-    </nav>
-</header>
+            <div class="hero-text">
+                <h1>Hi, I'm <span>ROHINI KOLEKAR</span></h1>
+                <h3>Web Developer & Designer</h3>
+                <p>
+                    I create modern and responsive websites to help your business grow.
+                </p>
+                <div class="buttons">
+                    <a href="#projects" class="btn-primary">View My Work</a>
+                </div>
+            </div>
 
-<!-- ================= HERO SECTION ================= -->
-<section class="hero" id="home">
-    <div class="hero-content">
-        <h2>Fresh Coffee, Fresh Mood</h2>
-        <p>Start your day with the perfect cup of coffee</p>
-        <a href="#menu" class="order-btn">Order Now</a>
-    </div>
-</section>
-
-<!-- ================= ABOUT SECTION ================= -->
-<section class="about" id="about">
-    <img 
-        src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80"
-        alt="Cup of coffee"
-    >
-
-    <div class="about-text">
-        <h3>About Our Café</h3>
-        <p>
-            Coffee Corner Café is a cozy place where freshly brewed coffee
-            meets delicious snacks. We serve love in every cup.
-        </p>
-    </div>
-</section>
-
-<!-- ================= MENU SECTION ================= -->
-<!-- Menu -->
-<section class="menu" id="menu">
-    <h3>Our Menu</h3>
-
-    <div class="menu-items">
-        <div class="item">
-            <img src="images/espresso.jpg">
-            <h4>Espresso</h4>
-            <p>₹120</p>
+            <div class="hero-image">
+            
+            <img src="images/girl.jpg.png">
+          
         </div>
 
-        <div class="item">
-            <img src="images/cappuccino.jpg">
-            <h4>Cappuccino</h4>
-            <p>₹150</p>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <h2>My Projects</h2>
+
+        <div class="project-item">
+            <h3>Tourist Management System</h3>
+            <p>A web-based application to manage tourist bookings, destinations, guides, and travel details efficiently.</p>
         </div>
 
-        <div class="item">
-            <img src="images/cold coffee.jpg">
-            <h4>Cold Coffee</h4>
-            <p>₹180</p>
+        <div class="project-item">
+            <h3>Hotel Donation Management System</h3>
+            <p>A system designed to manage hotel food and resource donations, helping connect hotels with NGOs and needy people.</p>
         </div>
-
-        <div class="item">
-            <img src="images/chocolate muffin.jpg">
-            <h4>Chocolate Muffin</h4>
-            <p>₹90</p>
-        </div>
-    </div>
-</section>
-
-<!-- ================= FOOTER ================= -->
-<footer id="contact">
-    <p>© 2026 Coffee Corner Café | All Rights Reserved</p>
-</footer>
-
-<!-- ================= DARK MODE SCRIPT ================= -->
-<script>
-    const toggleBtn = document.getElementById("themeToggle");
-
-    toggleBtn.addEventListener("click", () => {
-        document.body.classList.toggle("dark");
-        toggleBtn.textContent =
-            document.body.classList.contains("dark") ? "☀️" : "🌙";
-    });
-</script>
+    </section>
 
 </body>
 </html>
